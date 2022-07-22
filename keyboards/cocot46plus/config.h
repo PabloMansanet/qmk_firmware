@@ -51,8 +51,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_PAD_B { D2 }
 #define ENCODER_RESOLUTION 4
 
+// Prevent normal rollover on alphas from accidentally triggering mods.
+#define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
+
+// Recommended for heavy chording.
+#define QMK_KEYS_PER_SCAN 4
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN B6
