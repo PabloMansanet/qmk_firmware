@@ -5,6 +5,8 @@
 
 #include "config_common.h"
 
+#define ENCODER_RESOLUTION 2 
+
 #define MATRIX_ROWS 4
 #define MATRIX_COLS 10
 
