@@ -17,9 +17,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) { /* Second encoder */
         if (clockwise) {
-          tap_code(KC_MS_WH_UP);
-        } else {
           tap_code(KC_MS_WH_DOWN);
+        } else {
+          tap_code(KC_MS_WH_UP);
         }
     }
     return false;
