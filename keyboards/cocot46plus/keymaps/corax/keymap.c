@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
       KC_LSFT,    KC_Z,ALGR_T(KC_X), KC_C,   KC_D,    KC_V,                                          KC_K,    KC_H, KC_COMM,  ALGR_T(KC_DOT), KC_SLSH, KC_MINS,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
-                        XXXXXXX, XXXXXXX, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),   KC_MS_BTN1,             KC_MS_BTN2,  KC_ENT, KC_BSPC, XXXXXXX,  XXXXXXX,
+                        XXXXXXX, XXXXXXX, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),   KC_MS_BTN1,             KC_MS_BTN2,  LT(_TRACKBALL, KC_ENT), LT(_TRACKBALL,KC_BSPC), XXXXXXX,  XXXXXXX,
                                                                  KC_PGUP, KC_MS_BTN3,  KC_PGDOWN, XXXXXXX, XXXXXXX, XXXXXXX
                                                             //`--------------'  `--------------'
     ),
@@ -63,13 +63,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_RAISE] = LAYOUT(
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
-       KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                          KC_6,    KC_7,    KC_8,    KC_9,   KC_0,  KC_BSPC,
+
+       XXXXXXX, KC_F12, KC_F7, KC_F8, KC_F9, KC_PSCR, XXXXXXX, KC_7, KC_8, KC_9, XXXXXXX, XXXXXXX,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
-      KC_LCTL,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                        KC_APP,   KC_UP,S(KC_RO), KC_UNDS, KC_DQUO, KC_COLN,
+
+    XXXXXXX,LGUI_T(KC_F11), LALT_T(KC_F4), LCTL_T(KC_F5), LSFT_T(KC_F6), XXXXXXX, XXXXXXX, LSFT_T(KC_4), LCTL_T(KC_5), LALT_T(KC_6), KC_LGUI, XXXXXXX,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
-      KC_LSFT,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,                                       KC_LEFT, KC_DOWN, KC_RGHT,  KC_DOT, KC_SLSH, KC_MINS,
+    XXXXXXX, KC_F10, KC_F1, KC_F2, KC_F3, KC_PAUS, XXXXXXX, KC_1, KC_2, KC_3, XXXXXXX, XXXXXXX, 
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
-                        KC_LGUI, DEL_ALT,   TT(3),  KC_SPC,   KC_MS_BTN4,             KC_MS_BTN5,  KC_ENT, KC_TRNS, KC_BSPC,  KC_ESC,
+                        XXXXXXX, XXXXXXX,   XXXXXXX,  XXXXXXX,   KC_MS_BTN4,             KC_MS_BTN5,  KC_TAB, KC_0, KC_DOT,  KC_COMMA,
                                                                  KC_PGUP, KC_MS_BTN3,  KC_PGDOWN, XXXXXXX, XXXXXXX, XXXXXXX
                                                             //`--------------'  `--------------'
     ),
@@ -77,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_TOG,                                       SCRL_TO,  CPI_SW, SCRL_SW, ROT_L15, ROT_R15, XXXXXXX,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
-      XXXXXXX, XXXXXXX, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD,                                       SCRL_MO, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD,                                       SCRL_MO, KC_LEFT, KC_DOWN, KC_RIGHT, KC_UP, XXXXXXX,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
       XXXXXXX, XXXXXXX, RGB_VAD, RGB_SAD, RGB_HUD,RGB_RMOD,                                       SCRL_IN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
