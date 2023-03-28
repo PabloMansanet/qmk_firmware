@@ -27,7 +27,8 @@ enum layer_number {
     // NUM
     _RAISE = 2,
     // NAV
-    _TRACKBALL = 3
+    _TRACKBALL = 3,
+    _ART= 4
 };
 
 
@@ -46,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_LSFT,    KC_Z,ALGR_T(KC_X), KC_C,   KC_D,    KC_V,                                          KC_K,    KC_H, KC_COMM,  ALGR_T(KC_DOT), KC_SLSH, KC_MINS,
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
                         XXXXXXX, XXXXXXX, LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC),   KC_MS_BTN1,             KC_MS_BTN2,  LT(_TRACKBALL, KC_ENT), LT(_TRACKBALL,KC_BSPC), XXXXXXX,  XXXXXXX,
-                                                                 KC_PGUP, KC_MS_BTN3,  KC_PGDOWN, XXXXXXX, XXXXXXX, XXXXXXX
+                                                                 KC_WH_U, TO(_ART),  KC_WH_D, XXXXXXX, XXXXXXX, XXXXXXX
                                                             //`--------------'  `--------------'
     ),
   [_LOWER] = LAYOUT(
@@ -85,6 +86,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-------------------------------------------------------|                                   |-------------------------------------------------------|
                         KC_LGUI, DEL_ALT, KC_TRNS,  KC_SPC,   KC_MS_BTN1,             KC_MS_BTN2,  KC_ENT, RS_HENK, KC_BSPC,  KC_ESC,
                                                                  KC_PGUP, KC_MS_BTN3,  KC_PGDOWN, XXXXXXX, XXXXXXX, XXXXXXX
+                                                            //`--------------'  `--------------'
+    ),
+  [_ART] = LAYOUT(
+  //|-------------------------------------------------------|                                   |-------------------------------------------------------|
+      KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,                                       SCRL_TO,  CPI_SW, SCRL_SW, ROT_L15, ROT_R15, XXXXXXX,
+  //|-------------------------------------------------------|                                   |-------------------------------------------------------|
+      KC_LEFT_SHIFT, KC_A, KC_S, KC_D, KC_F, KC_G,                                       SCRL_MO, KC_LEFT, KC_DOWN, KC_RIGHT, KC_UP, XXXXXXX,
+  //|-------------------------------------------------------|                                   |-------------------------------------------------------|
+      KC_LEFT_CTRL, KC_Z, KC_X, KC_C, KC_V, KC_B,                                       SCRL_IN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|-------------------------------------------------------|                                   |-------------------------------------------------------|
+                        KC_DEL, KC_LEFT_ALT, LCTL(KC_Z),  RCS(KC_Z),   KC_WH_D,    KC_WH_U, LCTL(KC_Z),  RCS(KC_Z), RS_HENK, KC_BSPC, 
+                                                                 KC_4, TO(_BASE),  KC_6, XXXXXXX, XXXXXXX, XXXXXXX
                                                             //`--------------'  `--------------'
     )
 };
